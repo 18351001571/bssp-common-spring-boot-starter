@@ -17,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableConfigurationProperties(Knife4jProperties.class)
 @ConditionalOnClass(Knife4jProperties.class)
+@ConditionalOnProperty(prefix = "knife4j" ,havingValue = "true", name = "isOpen")
 @EnableSwagger2
 public class SwaggerConfiguration {
 
