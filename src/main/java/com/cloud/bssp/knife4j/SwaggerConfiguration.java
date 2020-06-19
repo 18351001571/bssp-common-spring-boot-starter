@@ -1,5 +1,6 @@
 package com.cloud.bssp.knife4j;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -19,6 +20,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @ConditionalOnClass(Knife4jProperties.class)
 @ConditionalOnProperty(prefix = "knife4j" ,havingValue = "true", name = "isOpen")
 @EnableSwagger2
+@EnableSwaggerBootstrapUI
 public class SwaggerConfiguration {
 
     @Autowired
