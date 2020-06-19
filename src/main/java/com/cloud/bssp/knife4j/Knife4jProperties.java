@@ -1,5 +1,6 @@
 package com.cloud.bssp.knife4j;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author weirx
  * @version 1.0
  */
+@Data
 @ConfigurationProperties(prefix = "knife4j" )
 public class Knife4jProperties {
 
@@ -45,52 +47,13 @@ public class Knife4jProperties {
      */
     private String version;
 
-    public String getBasePackage() {
-        return basePackage;
-    }
+    /**
+     * 分组名称
+     */
+    private String groupName;
 
-    public void setBasePackage(String basePackage) {
-        this.basePackage = basePackage;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getServiceUrl() {
-        return serviceUrl;
-    }
-
-    public void setServiceUrl(String serviceUrl) {
-        this.serviceUrl = serviceUrl;
-    }
-
-    public String getDescribe() {
-        return describe;
-    }
-
-    public void setDescribe(String describe) {
-        this.describe = describe;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
+    /**
+     * 服务url
+     */
+    private String host;
 }

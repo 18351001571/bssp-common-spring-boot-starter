@@ -28,6 +28,8 @@ public class SwaggerConfiguration {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                .groupName(knife4jProperties.getGroupName())
+                .host(knife4jProperties.getHost())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(knife4jProperties.getBasePackage()))
                 .paths(PathSelectors.any())
