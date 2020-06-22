@@ -40,6 +40,17 @@ public class R<T> implements Serializable {
     /**
      * @param
      * @return com.cloud.bssp.util.R<T>
+     * @description: 成功返回，指定对象
+     * @author weirx
+     * @date 2020/6/19
+     */
+    public static <T> R<T> success(T data) {
+        return restResult(data, CommonReturnEnum.SUCCESS.getCode(), CommonReturnEnum.SUCCESS.getName());
+    }
+
+    /**
+     * @param
+     * @return com.cloud.bssp.util.R<T>
      * @description: 成功返回，指定msg,data
      * @author weirx
      * @date 2020/6/19
