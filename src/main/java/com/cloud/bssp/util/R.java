@@ -1,15 +1,24 @@
 package com.cloud.bssp.util;
 
 import com.cloud.bssp.enums.CommonReturnEnum;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@ApiModel(value = "返回对象封装",description = "返回对象封装")
 public class R<T> implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    @ApiModelProperty(notes  = "返回码",required = true)
     private long code;
+
+    @ApiModelProperty(notes  = "返回数据")
     private T data;
+
+    @ApiModelProperty(notes  = "返回信息",required = true)
     private String msg;
 
     public R() {
