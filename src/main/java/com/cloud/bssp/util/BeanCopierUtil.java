@@ -1,21 +1,22 @@
 package com.cloud.bssp.util;
 
 import org.springframework.cglib.beans.BeanCopier;
-
 import java.util.concurrent.ConcurrentHashMap;
- 
+
 /**
  * BeanCopier工具类
- * @author 李锋镝
+ *
+ * @author weirx
  */
 public class BeanCopierUtil {
     /**
      * BeanCopier的缓存
      */
     static final ConcurrentHashMap<String, BeanCopier> BEAN_COPIER_CACHE = new ConcurrentHashMap<>();
- 
+
     /**
      * BeanCopier的copy
+     *
      * @param source 源文件的
      * @param target 目标文件
      */
@@ -30,9 +31,10 @@ public class BeanCopierUtil {
         }
         beanCopier.copy(source, target, null);
     }
- 
+
     /**
      * 生成key
+     *
      * @param srcClazz 源文件的class
      * @param tgtClazz 目标文件的class
      * @return string
