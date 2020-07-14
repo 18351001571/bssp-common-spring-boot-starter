@@ -1,4 +1,4 @@
-package com.cloud.bssp.knife4j;
+package com.cloud.bssp.config.knife4j;
 
 import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.beans.factory.annotation.Autowired;

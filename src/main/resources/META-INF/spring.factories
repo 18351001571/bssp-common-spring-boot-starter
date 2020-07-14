@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.cloud.bssp.knife4j.SwaggerConfiguration
+com.cloud.bssp.config.knife4j.SwaggerConfiguration

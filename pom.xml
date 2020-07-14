@@ -19,6 +19,23 @@
     </build>
     <packaging>jar</packaging>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.3.2</mybatis-plus-generator.version>
+        <fastjson.version>1.2.59</fastjson.version>
+        <druid.version>1.1.22</druid.version>
+        <mysql.version>5.1.49</mysql.version>
+        <velocity.version>2.2</velocity.version>
+        <nacos.version>2.2.1.RELEASE</nacos.version>
+        <junit.version>4.13</junit.version>
+        <spring-test.version>5.2.7.RELEASE</spring-test.version>
+        <spring-boot-test.version>2.2.5.RELEASE</spring-boot-test.version>
+        <bssp-common-spring-boot-starter.version>0.0.1-SNAPSHOT</bssp-common-spring-boot-starter.version>
+        <lombok.version>1.16.10</lombok.version>
+    </properties>
+
     <dependencies>
         <!--   主要给IDE使用。如当配置此jar相关配置属性在 application.yml ，你可以用ctlr+鼠标左键点击属性名，IDE会跳转到你配置此属性的类中     -->
         <dependency>
@@ -67,6 +84,28 @@
             <groupId>ma.glasnost.orika</groupId>
             <artifactId>orika-core</artifactId>
             <version>1.5.2</version><!-- or latest version -->
+        </dependency>
+
+        <!--    mybatis-plus    -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <!--   druid     -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!--mysql驱动包-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>

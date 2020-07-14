@@ -1,4 +1,4 @@
-package com.cloud.bssp.knife4j;
+package com.cloud.bssp.config.knife4j;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
