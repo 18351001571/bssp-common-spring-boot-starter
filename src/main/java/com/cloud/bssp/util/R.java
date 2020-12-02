@@ -13,7 +13,7 @@ public class R<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(notes  = "返回码",required = true)
-    private long code;
+    private int code;
 
     @ApiModelProperty(notes  = "返回数据")
     private T data;
@@ -124,7 +124,7 @@ public class R<T> implements Serializable {
         return restResult(data, code, msg);
     }
 
-    private static <T> R<T> restResult(T data, long code, String msg) {
+    private static <T> R<T> restResult(T data, int code, String msg) {
         R<T> apiResult = new R();
         apiResult.setCode(code);
         apiResult.setData(data);
