@@ -22,6 +22,7 @@ public class R<T> implements Serializable {
     private String msg;
 
     public R() {
+
     }
 
     /**
